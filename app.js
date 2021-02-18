@@ -16,7 +16,6 @@ app.get('/tea/', (req, res) => {
   res.json({
       data
     })
-    console.log(data[0])
 })
 
 app.get('/tea/:id', (req, res) => {
