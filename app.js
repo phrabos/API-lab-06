@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const cors = require('cors');
 const app = express()
@@ -6,15 +7,24 @@ app.use(cors())
 
 app.get('/', (req, res) => {
   res.json({
-      greet: 'hello world'
+      Documentation: 'Docs will go here!'
     })
 })
-app.get('/pokemon/:id', (req, res) => {
+
+app.get('/tea/', (req, res) => {
+
+  res.json({
+      data
+    })
+    console.log(data[0])
+})
+
+app.get('/tea/:id', (req, res) => {
     const id = Number(req.params.id);
-    const selectedPokemon = data.find((poke) => poke.species_id === id);
+    const selectedTea = data.find((tea) => tea.id === id);
 
     res.json({
-        selectedPokemon
+        selectedTea
       })
   })
 
