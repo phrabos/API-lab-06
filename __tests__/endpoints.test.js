@@ -21,7 +21,7 @@ it('should return a single tea objects', async (done) => {
     done()
   })
   it('should return a single tea objects', async (done) => {
-    const expectation =  [  
+    const expectation =  {teaByCategory:[  
     {
         id: 1, 
         name: 'Da Hong Pao',
@@ -40,7 +40,7 @@ it('should return a single tea objects', async (done) => {
         price: 25,
         aged: false,
     },
-]
+]}
     const response = await request.get('/tea/category/Yancha')
   
     expect(response.status).toBe(200)
